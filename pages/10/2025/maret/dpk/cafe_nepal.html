@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Code Editor</title>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        color: #d4d4d4;
+        font-family: "Courier New", Courier, monospace;
+        padding: 20px;
+      }
+
+      .editor {
+        background-color: #252526;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; color: white; font-weight: bold;">Program Cafe Nepal Python</h1>
+    <div class="editor">
+      <pre id="code-box">
+        menu = [
+            {"nama": "Mie Ayam", "harga": 7000}, #Indeks ke-0
+            {"nama": "Cireng Kuah", "harga": 5000}, #Indeks ke-1
+            {"nama": "Bakso", "harga": 5000}, #Indeks ke-2
+            {"nama": "Ayam Geprek", "harga": 7000}, #Indeks ke-3
+            {"nama": "Gorengan", "harga": 1000}, #Indeks ke-4
+            {"nama": "Es Teh", "harga": 3000}, #Indeks ke-5
+        ]
+        
+        menu_dibeli = [] 
+        banyak_menu = [] 
+        
+        print("=" *40)
+        print("Selamat Datang di Cafe Nepal")
+        print("=" *40)
+        
+        print("Menu makanan")
+        print("=" *40)
+        
+        l = len(menu) # panjang data menu
+        for i in range(1, l+1):
+            print(f"{i}. {menu[i-1]['nama']} - Rp.{menu[i-1]['harga']}")
+        print("0. Keluar")
+        
+        print("=" *40)
+        
+        
+        while True:
+            nama_pembeli = input("Masukkan nama pembeli: ")
+    
+            if nama_pembeli == "":
+                print("Nama tidak boleh kosong\n")
+            else:
+                break
+        
+        harga_akhir = 0
+    
+        while True: 
+            pilihan=int(input("\nMasukkan pilihan: "))
+        
+            if pilihan <= l and pilihan > 0:
+                
+                menu_dibeli.append(menu[pilihan-1]["nama"])
+            
+                jumlah = int(input(f"Masukkan jumlah {menu[pilihan-1]['nama']} yang dibeli: "))
+            
+                banyak_menu.append(jumlah)
+                
+                total = menu[pilihan-1]["harga"] * jumlah
+                harga_akhir += total
+                
+            elif pilihan == 0: # Pilih Keluar
+                print(f"\nSubtotal: Rp.{harga_akhir}")
+                print("\nSilahkan bayar")
+                
+                while True:
+                    bayar = int(input("Masukkan jumlah uang: Rp."))
+                
+                    if bayar < harga_akhir:
+                        print("\nUang pembeli kurang")
+                    else:
+                        break
+                    
+                print(f"\n{'-' *40}")
+                print("Cafe Nepal")
+                print("-" *40)
+                
+                from datetime import date
+                hari = date.today()
+                print(hari)
+                
+                print(f"\nNama Pembeli: {nama_pembeli}")
+                print(f"{'-' *40}\n")
+                
+                for j in range(0, len(menu_dibeli)):
+                    print(f"- {menu_dibeli[j]} {banyak_menu[j]}") # Ex: - Bakso 3
+                
+                print(f"\nSubtotal: Rp.{harga_akhir}")
+                print(f"Total: Rp.{harga_akhir}")
+                print(f"Tunai: Rp.{bayar}")
+                print(f"Kembali: Rp.{bayar - harga_akhir}")
+                
+                print(f"\n{'-' *40}")
+                print("Terimakasih sudah belanja disini")
+                print("-" *40)
+                
+                break
+            
+            else:
+                print("Tidak Valid")</pre>
+    </div>
+  </body>
+</html>

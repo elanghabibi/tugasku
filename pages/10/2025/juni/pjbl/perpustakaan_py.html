@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Code Editor</title>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        color: #d4d4d4;
+        font-family: "Courier New", Courier, monospace;
+        padding: 20px;
+      }
+
+      .editor {
+        background-color: #252526;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; color: white; font-weight: bold">
+      Program Perpustakaan Python
+    </h1>
+    <div class="editor">
+      <!-- Taruh disini -->
+      <pre id="code-box">
+import sys
+
+#List Judul Buku
+judul_buku = [
+    "Clean Code",
+    "The Pragmatic Programmer",
+    "Introduction to Algorithms",
+    "Python Crash Course",
+    "Head First Java",
+    "You Don't Know JS",
+    "Eloquent JavaScript",
+    "Structure and Interpretation of Computer Programs",
+    "Design Patterns",
+    "Artificial Intelligence: A Modern Approach"
+] 
+
+#List Pengarang Buku
+pengarang_buku = [
+    "Robert C. Martin",
+    "Andrew Hunt dan David Thomas",
+    "Thomas H. Cormen",
+    "Eric Matthes",
+    "Kathy Sierra dan Bert Bates",
+    "Kyle Simpson",
+    "Marijn Haverbeke",
+    "Harold Abelson dan Gerald Jay Sussman",
+    "Erich Gamma et al.",
+    "Stuart Russell dan Peter Norvig"
+]
+
+
+print("== MENU PERPUSTAKAAN ==")
+print("1. Tambah Buku")
+print("2. Lihat Daftar Buku")
+print("3. Cari Buku")
+print("4. Keluar")
+
+while True:
+    #Input Pilih Menu antara 1, 2, 3, 4
+    pilih_menu = input("\nPilih menu (1-4): ")
+    
+    #Tambah Buku
+    if pilih_menu == "1":
+        #Tambah Judul Buku Baru
+        tambah_judul = input("\nJudul buku: ")
+        
+        #Tambah Nama Pengarang Buku
+        tambah_pengarang = input("Pengarang: ")
+    
+        # Memasukkan hasil input ke list
+        judul_buku.append(tambah_judul)
+        pengarang_buku.append(tambah_pengarang)
+
+        print("\nBuku berhasil ditambahkan!")
+
+    #Lihat Daftar Buku
+    elif pilih_menu == "2":
+        print("\n== Daftar Buku ==")
+        # len(judul_buku) = Banyak data dalam list
+        for i in range(len(judul_buku)):
+            print(f"{i+1}. {judul_buku[i]} oleh {pengarang_buku[i]}")
+    
+    # Cari Buku
+    elif pilih_menu == "3":
+        # Input judul buku yang dicari
+        cari_buku = input("\nCari buku: ")
+
+        # perulangan mengecek apakah buku yang dicari ada
+        # len(judul_buku) = Banyak data dalam list
+        for i in range(len(judul_buku)):
+            # cek satu per satu apakah judul buku yang dicari sama seperti yang ada di list judul_buku  
+            if cari_buku.lower() == judul_buku[i].lower():
+                print(f"{judul_buku[i]} oleh {pengarang_buku[i]}")
+                break
+        else:
+            print("Buku tidak ditemukan!")
+    # Keluar
+    elif pilih_menu == "4":
+        sys.exit()
+    
+    else:
+        print("\nPilihan tidak valid!")
+      </pre>
+    </div>
+  </body>
+</html>

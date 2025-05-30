@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TugasKu By Elang</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+    <header>
+      <h1>TugasKu by Elang</h1>
+      <h4>SMKN 1 Pemalang - PPLG</h4>
+      <p>Kumpulan Tugas dan Pencapaian dari Kelas 10 - 12</p>
+    </header>
+
+    <nav>
+      <div class="links">
+        <a onclick="filter('all')">All</a>
+        <a onclick="filter('kelas10')">Kelas 10</a>
+        <a onclick="filter('kelas11')">Kelas 11</a>
+        <a onclick="filter('kelas12')">Kelas 12</a>
+        <a onclick="filter('note')">Catatan</a>
+        <a onclick="filter('about')">Tentang</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- * Kelas 10 -->
+      <section id="kelas10" class="kelas">
+        <h2>Kelas 10</h2>
+
+        <!-- * Desember 2024 -->
+        <div class="bulan">
+          <h3>Desember 2024</h3>
+          <ul>
+            <li>
+              <div class="tugas-item">
+                <h4 style="color: red">Tugas Akhir DPK - Desain UI Web:</h4>
+                <p>Membuat desain tampilan website SMK.</p>
+                <button onclick="openModal('modal-desain-ui')">
+                  Selengkapnya <i class="bx bx-chevrons-right"></i>
+                </button>
+              </div>
+            </li>
+
+            <!-- Modal Pop-up -->
+            <div id="modal-desain-ui" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-desain-ui')"
+                  >&times;</span
+                >
+                <h2>DPK - Desain UI Web</h2>
+                <p>
+                  Ini adalah tugas membuat desain UI dari website portfolio
+                  menggunakan aplikasi Pixellab. Desainnya harus bisa responsive
+                  dan minimal terdapat 3 halaman: Beranda, Tentang, dan Kontak.
+                </p>
+                <a
+                  href="https://drive.google.com/drive/folders/1gJBrzgM68mXb-fhfyuTmxZ7y0THkdvBK?usp=drive_link" target="_blank"
+                  ><p>Lihat Hasil Tugas</p></a
+                >
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <!-- * Januari 2025 -->
+        <div class="bulan">
+          <h3>Januari 2025</h3>
+          <ul>
+            <li>
+              <div class="tugas-item">
+                <h4>Tugas DPK - Video Penjelasan Python:</h4>
+                <p>Membuat video yang isinya materi dasar Python.</p>
+                <button onclick="openModal('modal-materi-dasar-python')">
+                  Selengkapnya <i class="bx bx-chevrons-right"></i>
+                </button>
+              </div>
+            </li>
+
+            <!-- Modal Pop-up -->
+            <div id="modal-materi-dasar-python" class="modal">
+              <div class="modal-content">
+                <span
+                  class="close"
+                  onclick="closeModal('modal-materi-dasar-python')"
+                  >&times;</span
+                >
+                <h2>Video Penjelasan Python</h2>
+                <p>
+                  Ini adalah tugas membuat video materi dasar mengenai python.
+                  Tugas ini aku upload di youtube dengan link sebagai berikut:
+                </p>
+                <a href="https://youtu.be/OhTrqucBfOY?si=d3HQ_myH4vmbifXw"
+                  ><p>Link Video YouTube</p></a
+                >
+              </div>
+            </div>
+          </ul>
+        </div>
+        <!-- * End Januari -->
+
+        <!-- * Maret 2025 -->
+        <div class="bulan">
+          <h3>Maret 2025</h3>
+          <ul>
+            <!-- * tugas 1 Maret -->
+            <li>
+              <div class="tugas-item">
+                <h4>Tugas Bahasa Indonesia - Poster Idola:</h4>
+                <p>Membuat poster biografi idola.</p>
+                <button onclick="openModal('modal-poster-idola')">
+                  Selengkapnya <i class="bx bx-chevrons-right"></i>
+                </button>
+              </div>
+            </li>
+
+            <!-- Modal Pop-up -->
+            <div id="modal-poster-idola" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-poster-idola')"
+                  >&times;</span
+                >
+                <h2>Poster Idola</h2>
+                <p>
+                  Ini adalah tugas membuat poster biografi idola. Ini adalah
+                  posternya:
+                </p>
+                <img
+                  src="pages/10/2025/maret/poster.jpg"
+                  alt="Preview Desain UI"
+                />
+              </div>
+            </div>
+
+            <!-- * Tugas Maret 2-->
+            <li>
+              <div class="tugas-item">
+                <h4>Tugas DPK Kelompok - Program Cafe Nepal:</h4>
+                <p>Membuat code program Cafe Nepal pakai Python.</p>
+                <button onclick="openModal('modal-program-cafeNepal')">
+                  Selengkapnya <i class="bx bx-chevrons-right"></i>
+                </button>
+              </div>
+            </li>
+
+            <!-- Modal Pop-up -->
+            <div id="modal-program-cafeNepal" class="modal">
+              <div class="modal-content">
+                <span
+                  class="close"
+                  onclick="closeModal('modal-program-cafeNepal')"
+                  >&times;</span
+                >
+                <h2>Program Python Cafe Nepal</h2>
+                <p>
+                  Ini adalah tugas membuat code python untuk program Cafe Nepal.
+                  Isi menunya adalah Pesan makanan, Struk Pembelian dll. Ini
+                  adalah hasil tugasnya:
+                </p>
+                <a
+                  href="https://drive.google.com/drive/folders/1-v5vqK2HxlHHBCqtEdoRml37P6KevcYf?usp=drive_link" target="_blank"
+                  ><p>PowerPoint</p></a
+                >
+                <a href="pages/10/2025/maret/dpk/cafe_nepal.html"
+                  ><p>Source Code</p></a
+                >
+              </div>
+            </div>
+          </ul>
+        </div>
+        <!-- * End Maret -->
+
+        <!-- * Juni 2025 -->
+        <div class="bulan">
+          <h3>Juni 2025</h3>
+          <ul>
+            <li>
+              <div class="tugas-item">
+                <h4 style="color: red">
+                  Tugas Akhir DPK - PJBL Perpustakaan Java & Python:
+                </h4>
+                <p>
+                  Membuat code program Perpustakaan menggunakan Java & Python.
+                </p>
+                <button onclick="openModal('modal-pjbl-perpustakaan')">
+                  Selengkapnya <i class="bx bx-chevrons-right"></i>
+                </button>
+              </div>
+            </li>
+
+            <!-- Modal Pop-up -->
+            <div id="modal-pjbl-perpustakaan" class="modal">
+              <div class="modal-content">
+                <span
+                  class="close"
+                  onclick="closeModal('modal-pjbl-perpustakaan')"
+                  >&times;</span
+                >
+                <h2>PJBL Perpustakaan</h2>
+                <p>
+                  Ini adalah tugas kelompok membuat code program perpustakaan
+                  menggunakan Java & Python. Fiturya adalah menambahkan buku,
+                  mencari, menghitung denda, melihat daftar buku. Berikut saya
+                  tampilkan hasil tugas dari kelompok saya:
+                </p>
+                <a
+                  href="https://drive.google.com/drive/folders/1bDYSVida_-x-EzXwAxONq6T7qSd-RoKn?usp=drive_link" target="_blank"
+                  ><p>PowerPoint</p></a
+                >
+                <a href="pages/10/2025/juni/pjbl/perpustakaan_java.html"
+                  ><p>Source Code Java</p></a
+                >
+                <a href="pages/10/2025/juni/pjbl/perpustakaan_py.html"
+                  ><p>Source Code Python</p></a
+                >
+              </div>
+            </div>
+          </ul>
+        </div>
+        <!-- * End Juni -->
+      </section>
+      <!-- * End Maret -->
+
+      <!-- * End Kelas 10 -->
+
+      <!-- * Kelas 11 -->
+      <section id="kelas11" class="kelas">
+        <h2>Kelas 11</h2>
+
+        <div class="bulan">
+          <p>Belum ada tugas</p>
+        </div>
+      </section>
+      <!-- * End Kelas 11 -->
+
+      <!-- * kelas 12 -->
+      <section id="kelas12" class="kelas">
+        <h2>Kelas 12</h2>
+
+        <div class="bulan">
+          <p>Belum ada tugas</p>
+        </div>
+      </section>
+      <!-- * End Kelas 12 -->
+
+      <!--  -->
+
+      <!--  -->
+
+      <!-- * Note -->
+      <section id="note" class="note kelas">
+        <h2>Catatan</h2>
+
+        <div class="bulan">
+          <h3>Maret 2025</h3>
+          <ul>
+            <li>
+              <div class="note-item">
+                <h4>Mendirikan Pixkyro Studio</h4>
+                <p>
+                  Aku terpikir untuk membuat sebuah studio yang fokus dalam
+                  Bidang Pengembangan Game dan Animasi 3D. Aku langsung membuat
+                  ide awal untuk membuat studio, nama yang dipilih adalah
+                  Pixkyro Studio. Pixkyro Studio dibuat pada tanggal
+                  <strong>26 Maret 2025</strong>, namun itu belum resmi, itu aku
+                  hanya terpikirkan saja belum ke tahap pengembangan.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- *End Note -->
+
+      <!-- * Tentang -->
+      <section id="about" class="kelas">
+        <h2>Tentang</h2>
+
+        <div class="bulan">
+          <p>
+            Ini adalah website yang berisi mengenai tugas sekolah ku dari aku
+            kelas 10 sampai aku lulus SMK. Perkenalkan aku Elang Alamsyah
+            Habibi, aku adalah pelajar dari SMKN 1 Pemalang Jurusan Pengembangan
+            Perangkat Lunak dan Gim.
+          </p>
+        </div>
+      </section>
+      <!-- * End tentang -->
+    </div>
+  </body>
+  <script src="assets/js/script.js"></script>
+</html>
